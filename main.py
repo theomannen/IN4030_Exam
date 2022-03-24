@@ -23,32 +23,36 @@ def readBLOSUM(filename):
             outerDict[splitLine[0]] = dict
     return outerDict
 
-def makeMatrix(blosum, v, w, penalty):
+def makeMatrix(blosum, v, w, penalty, penalty_ext):
+    del_matrix = np.zeros(shape=(len(v), len(w)))
+    ins_matrix = np.zeros(shape=(len(v), len(w)))
     scoreMatrix = np.zeros(shape=(len(v)+1, len(w)+1))
     backtrack = np.zeros(shape=(len(v)+1, len(w)+1))
     o = penalty
     q = penalty
     for i in range(1, len(v)+1):
         for j in range(1, len(w)+1):
+            open_ins = scoreMatrix[i-1][j] - penalty
+            ext_ins = ins_matrix[[i-1][j]] - penalty_ext
+            ins_matrix[i][j] = max(0, open_ins, ext_ins)
+
+            open_del = scoreMatrix[i - 1][j] - penalty
+            ext_del = del_matrix[[i - 1][j]] - penalty_ext
+            del_matrix[i][j] = max(0, open_del, ext_del)
+
             diagonal = scoreMatrix[i - 1][j - 1] + blosum[w[j-1]][v[i-1]]
-            delete = scoreMatrix[i-1][j] - q
-            insert = scoreMatrix[i][j-1] - o
+            delete = open_del[i-1][j] - blosum[w[j-1]][v[i-1]]
+            insert = scoreMatrix[i][j-1] - blosum[w[j-1]][v[i-1]]
+
             scoreMatrix[i][j] = max(diagonal, 0, insert, delete)
+
             if scoreMatrix[i][j] == diagonal:
-                o = penalty
-                q = penalty
                 backtrack[i][j] = 2
             elif scoreMatrix[i][j] == insert:
-                o = 1
-                q = penalty
                 backtrack[i][j] = 1
             elif scoreMatrix[i][j] == delete:
-                q = 1
-                o = penalty
                 backtrack[i][j] = 0
             elif scoreMatrix[i][j] == 0:
-                o = penalty
-                q = penalty
                 backtrack[i][j] = 3
     print(scoreMatrix)
     print(backtrack)
@@ -77,7 +81,7 @@ if __name__ == "__main__":
     #v = 'ATTCGTA'
     #w = 'ATGCTA'
     blosum = readBLOSUM('BLOSUM62.txt')
-    scoreMatrix, backtrack = makeMatrix(blosum, v, w, penalty)
+    scoreMatrix, backtrack = makeMatrix(blosum, v, w, penalty, 1)
     score = np.amax(scoreMatrix)
     max_indexes = np.unravel_index(np.argmax(scoreMatrix), scoreMatrix.shape)
     v_, w_ = OutputLCS(backtrack, v, w, max_indexes[0], max_indexes[1], '', '')
