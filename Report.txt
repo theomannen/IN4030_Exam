@@ -7,7 +7,7 @@
         VYWYHSLPIRRRVLAPRINLTFRKMMAVDKKESILTT
 
     b)
-        We should use the protien blast, since this is a protien sequence
+        We should use the protein blast, since this is a protein sequence
 
     c)
         23
@@ -87,8 +87,4 @@
         Sbjct: AIFQFG------GLKRNDPLKRLLLEHGDVVVWGGESRLFYHGIQPLKAGFHPLTIDCRYNLTFRQA---GKKE
 
         The reason this did not show up on the search is because it is not very similar to the query sequence.
-
-
-
-
 
