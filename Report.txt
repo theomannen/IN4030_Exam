@@ -86,5 +86,9 @@
         Match:  +F+          +   P++ L L HG +++    + ++++   P++       +  R NLTFR+     KKE
         Sbjct: AIFQFG------GLKRNDPLKRLLLEHGDVVVWGGESRLFYHGIQPLKAGFHPLTIDCRYNLTFRQA---GKKE
 
-        The reason this did not show up on the search is because it is not very similar to the query sequence.
+        The reason this did not show up on the search is likely because the E-value, which is based on the dataset
+        provided is above 10, which was the limit we were to set, and is also the standard for BLAST:
+        https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp#expect
+        When searching with the E Threshold set to 20 we find it with an E value of 19
+
 
