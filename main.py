@@ -86,7 +86,7 @@ if __name__ == "__main__":
     score = np.amax(scoreMatrix)
     max_indexes = np.unravel_index(np.argmax(scoreMatrix), scoreMatrix.shape)
     v_, w_ = OutputLCS(backtrack, v, w, max_indexes[0], max_indexes[1], '', '')
-    width = 80
+    width = 60
     loops = int(len(v_)/width)
     print(score)
     for i in range(loops):

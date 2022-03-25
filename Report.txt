@@ -1,94 +1,102 @@
 1.
-    a)
-        >NP_001264426.2 DNA oxidative demethylase ALKBH2 isoform 1 [Gallus gallus]
-        MDRFVVKRSAEEPGGDGKKPRLEEEAGGLPHPSQPSQEIRAQGLSLEYRLLFGRAEADAIFQQLEKEVEY
-        FEGEQTKLHVFGKWHNIPRKQVTYGDPELTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVINRY
-        KDGEDHIGEHRDDEKELVPRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTN
-        VYWYHSLPIRRRVLAPRINLTFRKMMAVDKKESILTT
+a)
+>NP_001264426.2 DNA oxidative demethylase ALKBH2 isoform 1 [Gallus gallus]
+MDRFVVKRSAEEPGGDGKKPRLEEEAGGLPHPSQPSQEIRAQGLSLEYRLLFGRAEADAIFQQLEKEVEY
+FEGEQTKLHVFGKWHNIPRKQVTYGDPELTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVINRY
+KDGEDHIGEHRDDEKELVPRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTN
+VYWYHSLPIRRRVLAPRINLTFRKMMAVDKKESILTT
 
-    b)
-        We should use the protein blast, since this is a protein sequence
+b)
+We should use the protein blast, since this is a protein sequence
 
-    c)
-        23
+c)
+23
 
-    d)
-        The accession number of the human (homo sapiens) sequence with the best match is Q6NS38
+d)
+The accession number of the human (homo sapiens) sequence with the best match is Q6NS38
 
-    e)
-        Alignment:
-        Query  1    MDRFVVKRS--------------AEEP---GGDG----KKPRLEEEAGGLPHPSQPS-QE  38
-                    MDRF+VK +               EEP   GGD     K+PR E    G  H + PS +
-        Sbjct  1    MDRFLVKGAQGGLLRKQEEQEPTGEEPAVLGGDKESTRKRPRREAPGNG-GHSAGPSWRH  59
+e)
+Alignment:
+Query  1    MDRFVVKRS--------------AEEP---GGDG----KKPRLEEEAGGLPHPSQPS-QE  38
+            MDRF+VK +               EEP   GGD     K+PR E    G  H + PS +
+Sbjct  1    MDRFLVKGAQGGLLRKQEEQEPTGEEPAVLGGDKESTRKRPRREAPGNG-GHSAGPSWRH  59
 
-        Query  39   IRAQGLSLEYRLLFGRAEADAIFQQLEKEVEYFEGEQTKLHVFGKWHNIPRKQVTYGDPE  98
-                    IRA+GL   Y +LFG+AEAD IFQ+LEKEVEYF G   ++ VFGKWH++PRKQ TYGD
-        Sbjct  60   IRAEGLDCSYTVLFGKAEADEIFQELEKEVEYFTGALARVQVFGKWHSVPRKQATYGDAG  119
+Query  39   IRAQGLSLEYRLLFGRAEADAIFQQLEKEVEYFEGEQTKLHVFGKWHNIPRKQVTYGDPE  98
+            IRA+GL   Y +LFG+AEAD IFQ+LEKEVEYF G   ++ VFGKWH++PRKQ TYGD
+Sbjct  60   IRAEGLDCSYTVLFGKAEADEIFQELEKEVEYFTGALARVQVFGKWHSVPRKQATYGDAG  119
 
-        Query  99   LTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVINRYKDGEDHIGEHRDDEKELV  158
-                    LTYT+SG+T SPKPWIPVL  IRD +   TG TFNFV+INRYKDG DHIGEHRDDE+EL
-        Sbjct  120  LTYTFSGLTLSPKPWIPVLERIRDHVSGVTGQTFNFVLINRYKDGCDHIGEHRDDERELA  179
+Query  99   LTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVINRYKDGEDHIGEHRDDEKELV  158
+            LTYT+SG+T SPKPWIPVL  IRD +   TG TFNFV+INRYKDG DHIGEHRDDE+EL
+Sbjct  120  LTYTFSGLTLSPKPWIPVLERIRDHVSGVTGQTFNFVLINRYKDGCDHIGEHRDDERELA  179
 
-        Query  159  PRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTNVYWYHSLP  218
-                    P SPIASVSFGACRDFVFRH DSRGK+ +R +  +RL LAHGSLLMM +PTN +WYHSLP
-        Sbjct  180  PGSPIASVSFGACRDFVFRHKDSRGKSPSRRVAVVRLPLAHGSLLMMNHPTNTHWYHSLP  239
+Query  159  PRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTNVYWYHSLP  218
+            P SPIASVSFGACRDFVFRH DSRGK+ +R +  +RL LAHGSLLMM +PTN +WYHSLP
+Sbjct  180  PGSPIASVSFGACRDFVFRHKDSRGKSPSRRVAVVRLPLAHGSLLMMNHPTNTHWYHSLP  239
 
-        Query  219  IRRRVLAPRINLTFRKMMAVDK  240
-                    +R++VLAPR+NLTFRK++   K
-        Sbjct  240  VRKKVLAPRVNLTFRKILLTKK  261
+Query  219  IRRRVLAPRINLTFRKMMAVDK  240
+            +R++VLAPR+NLTFRK++   K
+Sbjct  240  VRKKVLAPRVNLTFRKILLTKK  261
 
-    f)
-        score       - 318
-        bitscore    - 814
-        E-value     - 3e-109
+f)
+score       - 318
+bitscore    - 814
+E-value     - 3e-109
 
 
 2.
-    a)
-        See main.py
-        The penalty for for my program works the same way as the BLAST site, meaning the extended penalty is not added
-        on the first opening of a gap. Hence, in order to get the results as shown in the exam, the penalty must be set to 12.
+a)
+See main.py
+The penalty for for my program works the same way as the BLAST site, meaning the extended penalty is not added
+on the first opening of a gap. Hence, in order to get the results as shown in the exam, the penalty must be set to 12.
 
-    b)
-        Score: 814
-        Alignment:
-        Query: MDRFVVK---------R-----SAEEPG---GDG----KKPRLEEEAGGLPHPSQPSQ-EIRAQGLSLEYRLLFGRAEAD
-        Match: MDRF+VK         +     + EEP    GD     K+PR E    G  H + PS   IRA+GL   Y +LFG+AEAD
-        Sbjct: MDRFLVKGAQGGLLRKQEEQEPTGEEPAVLGGDKESTRKRPRREAPGNGG-HSAGPSWRHIRAEGLDCSYTVLFGKAEAD
+b)
+Score: 814
+Alignment:
+Query: MDRFVVK---------R-----SAEEPG---GDG----KKPRLEEEAGGLPHPSQPSQ-E
+Match: MDRF+VK         +     + EEP    GD     K+PR E    G  H + PS
+Sbjct: MDRFLVKGAQGGLLRKQEEQEPTGEEPAVLGGDKESTRKRPRREAPGNGG-HSAGPSWRH
 
-        Query: AIFQQLEKEVEYFEGEQTKLHVFGKWHNIPRKQVTYGDPELTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVIN
-        Match:  IFQ+LEKEVEYF G   ++ VFGKWH++PRKQ TYGD  LTYT+SG+T SPKPWIPVL  IRD +   TG TFNFV+IN
-        Sbjct: EIFQELEKEVEYFTGALARVQVFGKWHSVPRKQATYGDAGLTYTFSGLTLSPKPWIPVLERIRDHVSGVTGQTFNFVLIN
+Query: IRAQGLSLEYRLLFGRAEADAIFQQLEKEVEYFEGEQTKLHVFGKWHNIPRKQVTYGDPE
+Match: IRA+GL   Y +LFG+AEAD IFQ+LEKEVEYF G   ++ VFGKWH++PRKQ TYGD
+Sbjct: IRAEGLDCSYTVLFGKAEADEIFQELEKEVEYFTGALARVQVFGKWHSVPRKQATYGDAG
 
-        Query: RYKDGEDHIGEHRDDEKELVPRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTNVYWYHSLP
-        Match: RYKDG DHIGEHRDDE+EL P SPIASVSFGACRDFVFRH DSRGK+ +R +  +RL LAHGSLLMM +PTN +WYHSLP
-        Sbjct: RYKDGCDHIGEHRDDERELAPGSPIASVSFGACRDFVFRHKDSRGKSPSRRVAVVRLPLAHGSLLMMNHPTNTHWYHSLP
+Query: LTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVINRYKDGEDHIGEHRDDEKELV
+Match: LTYT+SG+T SPKPWIPVL  IRD +   TG TFNFV+INRYKDG DHIGEHRDDE+EL
+Sbjct: LTYTFSGLTLSPKPWIPVLERIRDHVSGVTGQTFNFVLINRYKDGCDHIGEHRDDERELA
 
-        Query: IRRRVLAPRINLTFRKMMAVDK
-        Match: +R++VLAPR+NLTFRK++   K
-        Sbjct: VRKKVLAPRVNLTFRKILLTKK
+Query: PRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTNVYWYHSLP
+Match: P SPIASVSFGACRDFVFRH DSRGK+ +R +  +RL LAHGSLLMM +PTN +WYHSLP
+Sbjct: PGSPIASVSFGACRDFVFRHKDSRGKSPSRRVAVVRLPLAHGSLLMMNHPTNTHWYHSLP
 
-    c)
-        The score is the exact same, 814
+Query: IRRRVLAPRINLTFRKMMAVDK
+Match: +R++VLAPR+NLTFRK++   K
+Sbjct: VRKKVLAPRVNLTFRKILLTKK
 
-    d)
-        There are some minor discrepancies in the alignment as to where some gaps are. However, on a whole they align
-        very similarly. Longer common lines occur the same, but certain individual matches are replcaed by other matches.
+c)
+The score is the exact same, 814
 
-    e)
-        When running with a penalty of 11, and extension of 1 I get a score of 84.
-        Alignment:
-        Query: YTYSGVT---FSPKPWIPVL-NHIRDRLVLETGHT-F-N-FVVINRYKDGEDHIGEHRDDEKELVPRSPIASVSFGACRD
-        Match: Y YS +      P P +P   +++  R     G+  F     +INRY  G   +  H+D ++  +  +PI SVS G
-        Sbjct: YLYSPIDPQTNKPWPAMPQSFHNLCQRAATAAGYPDFQPDACLINRYAPGAK-LSLHQDKDEPDLR-APIVSVSLGL-P-
+d)
+There are some minor discrepancies in the alignment as to where some gaps are. However, on a whole they align
+very similarly. Longer common lines occur the same, but certain individual matches are replcaed by other matches.
 
-        Query: FVFRHCDSRGKNATRHIKPIR-LQLAHGSLLMMKYPTNVYWYHSLPIRR---R-VLAPRINLTFRKMMAVDKKE
-        Match:  +F+          +   P++ L L HG +++    + ++++   P++       +  R NLTFR+     KKE
-        Sbjct: AIFQFG------GLKRNDPLKRLLLEHGDVVVWGGESRLFYHGIQPLKAGFHPLTIDCRYNLTFRQA---GKKE
+e)
+When running with a penalty of 11, and extension of 1 I get a score of 84.
+Alignment:
+Query: YTYSGVT---FSPKPWIPVL-NHIRDRLVLETGHT-F-N-FVVINRYKDGEDHIGEHRDD
+Match: Y YS +      P P +P   +++  R     G+  F     +INRY  G   +  H+D
+Sbjct: YLYSPIDPQTNKPWPAMPQSFHNLCQRAATAAGYPDFQPDACLINRYAPGAK-LSLHQDK
 
-        The reason this did not show up on the search is likely because the E-value, which is based on the dataset
-        provided is above 10, which was the limit we were to set, and is also the standard for BLAST:
-        https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp#expect
-        When searching with the E Threshold set to 20 we find it with an E value of 19
+Query: EKELVPRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIR-LQLAHGSLLMMKYPTNVY
+Match: ++  +  +PI SVS G     +F+          +   P++ L L HG +++    + ++
+Sbjct: DEPDLR-APIVSVSLGL-P-AIFQFG------GLKRNDPLKRLLLEHGDVVVWGGESRLF
+
+Query: WYHSLPIRR---R-VLAPRINLTFRKMMAVDKKE
+Match: ++   P++       +  R NLTFR+     KKE
+Sbjct: YHGIQPLKAGFHPLTIDCRYNLTFRQA---GKKE
+
+The reason this did not show up on the search is likely because the E-value, which is based on the dataset
+provided is above 10, which was the limit we were to set, and is also the standard for BLAST:
+https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp#expect
+When searching with the E Threshold set to 20 we find it with an E value of 19
 
 
