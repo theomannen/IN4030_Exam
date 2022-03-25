@@ -45,5 +45,50 @@
 
 2.
     a)
-        See code
+        See main.py
+        The penalty for for my program works the same way as the BLAST site, meaning the extended penalty is not added
+        on the first opening of a gap. Hence, in order to get the results as shown in the exam, the penalty must be set to 12.
+
+    b)
+        Score: 814
+        Alignment:
+        Query: MDRFVVK---------R-----SAEEPG---GDG----KKPRLEEEAGGLPHPSQPSQ-EIRAQGLSLEYRLLFGRAEAD
+        Match: MDRF+VK         +     + EEP    GD     K+PR E    G  H + PS   IRA+GL   Y +LFG+AEAD
+        Sbjct: MDRFLVKGAQGGLLRKQEEQEPTGEEPAVLGGDKESTRKRPRREAPGNGG-HSAGPSWRHIRAEGLDCSYTVLFGKAEAD
+
+        Query: AIFQQLEKEVEYFEGEQTKLHVFGKWHNIPRKQVTYGDPELTYTYSGVTFSPKPWIPVLNHIRDRLVLETGHTFNFVVIN
+        Match:  IFQ+LEKEVEYF G   ++ VFGKWH++PRKQ TYGD  LTYT+SG+T SPKPWIPVL  IRD +   TG TFNFV+IN
+        Sbjct: EIFQELEKEVEYFTGALARVQVFGKWHSVPRKQATYGDAGLTYTFSGLTLSPKPWIPVLERIRDHVSGVTGQTFNFVLIN
+
+        Query: RYKDGEDHIGEHRDDEKELVPRSPIASVSFGACRDFVFRHCDSRGKNATRHIKPIRLQLAHGSLLMMKYPTNVYWYHSLP
+        Match: RYKDG DHIGEHRDDE+EL P SPIASVSFGACRDFVFRH DSRGK+ +R +  +RL LAHGSLLMM +PTN +WYHSLP
+        Sbjct: RYKDGCDHIGEHRDDERELAPGSPIASVSFGACRDFVFRHKDSRGKSPSRRVAVVRLPLAHGSLLMMNHPTNTHWYHSLP
+
+        Query: IRRRVLAPRINLTFRKMMAVDK
+        Match: +R++VLAPR+NLTFRK++   K
+        Sbjct: VRKKVLAPRVNLTFRKILLTKK
+
+    c)
+        The score is the exact same, 814
+
+    d)
+        There are some minor discrepancies in the alignment as to where some gaps are. However, on a whole they align
+        very similarly. Longer common lines occur the same, but certain individual matches are replcaed by other matches.
+
+    e)
+        When running with a penalty of 11, and extension of 1 I get a score of 84.
+        Alignment:
+        Query: YTYSGVT---FSPKPWIPVL-NHIRDRLVLETGHT-F-N-FVVINRYKDGEDHIGEHRDDEKELVPRSPIASVSFGACRD
+        Match: Y YS +      P P +P   +++  R     G+  F     +INRY  G   +  H+D ++  +  +PI SVS G
+        Sbjct: YLYSPIDPQTNKPWPAMPQSFHNLCQRAATAAGYPDFQPDACLINRYAPGAK-LSLHQDKDEPDLR-APIVSVSLGL-P-
+
+        Query: FVFRHCDSRGKNATRHIKPIR-LQLAHGSLLMMKYPTNVYWYHSLPIRR---R-VLAPRINLTFRKMMAVDKKE
+        Match:  +F+          +   P++ L L HG +++    + ++++   P++       +  R NLTFR+     KKE
+        Sbjct: AIFQFG------GLKRNDPLKRLLLEHGDVVVWGGESRLFYHGIQPLKAGFHPLTIDCRYNLTFRQA---GKKE
+
+        The reason this did not show up on the search is because it is not very similar to the query sequence.
+
+
+
+
 
